@@ -1,0 +1,810 @@
+<html>
+    <head>
+        <title>
+            pagina Cecytem Cuautitlán - pagina personal
+        </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #F5F5DC;
+            min-height: 100vh; 
+            overflow-y: auto; 
+        }
+
+        .gov-bar {
+            background: #9d2449;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .header-section {
+            position: relative;
+            height: 300px;
+            background-image: url('imagenes/portada_cecytem.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            padding: 28px;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: auto;
+        }
+
+        .main-nav {
+            background: #9d2449;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: static;
+            z-index: 100;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .main-nav li {
+            margin: 0;
+        }
+
+        .main-nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background 0.3s;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .main-nav a:hover {
+            background: #7a1c38;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .btn-regresar {
+            display: inline-block;
+            background: #9d2449;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-regresar:hover {
+            background: #7a1c38;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background: #0e6a3d;
+            color: white;
+            padding: 12px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 30px 0;
+            transition: background 0.3s;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .btn-principal:hover {
+            background: #0a5230;
+        }
+
+        center {
+            text-align: center;
+        }
+
+        details {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        summary {
+            background: #9d2449;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            list-style: none;
+            transition: background 0.3s;
+        }
+
+        summary:hover {
+            background: #7a1c38;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: " ▼";
+            float: right;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .content-details {
+            padding: 20px;
+            background: white;
+            border-top: 2px solid #f5f5f5;
+        }
+
+        .content-details p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .content-details img {
+            max-width: 60%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .content-details a {
+            color: #9d2449;
+            font-weight: 500;
+        }
+
+        .content-details a:hover {
+            color: #7a1c38;
+        }
+
+        h1 {
+            color: #0e6a3d;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #9d2449;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #0e6a3d;
+            font-size: 1.8em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 5px solid #9d2449;
+        }
+
+        h3 {
+            color: #9d2449;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        footer {
+            background: #9d2449;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            display: block;
+            border: none;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+            color: #9d2449;
+        }
+
+        .video-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+    <section id="regresar"></section>
+    <ul>
+        <li><a href="#materia">Materia</a></li>
+        <li><a href="#objetivo">Objetivo</a></li>
+        <li><a href="#evaluacion">Evaluación, propósito y proyecto final</a></li>
+        <li><a href="#temario">Temario: Tercer semestre - Emplea frameworks</a></li>
+    </ul>
+</nav>
+        <br>
+        <div class="container">
+        <center>
+        <h1>Emplea frameworks para el desarrollo de software</h1>
+        </center>
+        <br>
+        <section id="materia">
+            <h2>Materia</h2>
+            <br>
+            <p>Frameworks es una asignatura curricular del plan de estudios del CECyTEM, impartida por el docente Jaime Cruz López, cuyo objetivo es desarrollar 
+                y fortalecer las habilidades técnicas, analíticas y de resolución de problemas del alumno para comprender, analizar y aplicar frameworks de 
+                programación, así como diseñar, estructurar y desarrollar aplicaciones de software de manera eficiente, utilizando buenas prácticas y metodologías 
+                actuales.
+                <br>
+                La asignatura promueve el uso de herramientas tecnológicas modernas, el pensamiento lógico y computacional, y la capacidad de adaptarse a distintos 
+                entornos de desarrollo, aplicando los conocimientos en contextos académicos y profesionales.
+            </p>
+            <br>
+            <p>Durante el tercer semestre, esta asignatura tiene como propósito desarrollar en el alumno una comprensión sólida de la diversidad de enfoques y 
+                soluciones técnicas desde las cuales puede abordarse un mismo problema de desarrollo de software, fomentando el pensamiento lógico, crítico y analítico.
+                <br>
+                Esto se logra mediante el análisis de estructuras de código, la comparación de tecnologías y frameworks, así como la construcción de aplicaciones web y 
+                programas utilizando HTML, CSS, JavaScript, React y lenguajes orientados a bases de datos como Python, promoviendo soluciones claras, eficientes y bien 
+                fundamentadas en contextos académicos y profesionales.
+            </p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <br>
+        <br>
+        <section id="objetivo">
+            <h2>Objetivo</h2>
+            <br>
+            <p>Desarrollar en el alumno la capacidad de pensamiento lógico, análisis y comunicación técnica, mediante la comprensión, interpretación y producción de 
+                proyectos de desarrollo web y de software, utilizando HTML, CSS, JavaScript, React y lenguajes orientados a bases de datos como Python, que le permitan 
+                diseñar, argumentar y justificar soluciones tecnológicas, valorar la diversidad de enfoques de programación y comunicar de manera eficaz sus ideas en 
+                contextos académicos y profesionales.</p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <section id="evaluacion">
+            <h2>Evaluación y proyecto final</h2>
+            <br>
+            <p>• Examen: 50%.</p>
+            <p>• Cuaderno: 25%.</p>
+            <p>• Proyecto: 25%.</p>
+            <br>
+            <h2>Proyecto (por parcial)</h2>
+            <h3>Primer parcial</h3>
+            <p>Proyecto empresarial - maquetado de la pagina</p>
+            <h3>Segundo parcial</h3>
+            <p>Maquina expendedora - individual con python</p>
+            <h3>Tercer parcial</h3>
+            <p>Pagina de la empresa - html y react</p>
+            <p>Pagina personal - temario de lo visto por materia (tercer semestre)</p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <br>
+
+        <section id="temario">
+            <h2>Temario tercer semestre - Emplea frameworks para el desarrollo de software</h2>
+            <br>
+            <h2>Primer parcial - Prácticas</h2> 
+            <h3>Python y entorno</h3>
+            <br>
+            
+            <details>
+                <summary>Python</summary>
+                <div class="content-details">
+                    <p>Python es un lenguaje de programación de alto nivel, interpretado y de sintaxis clara, diseñado para desarrollar aplicaciones 
+                        de manera eficiente y estructurada. Se utiliza para la creación de programas, análisis de datos, desarrollo web, automatización 
+                        de procesos e inteligencia artificial, gracias a su versatilidad y amplia gama de bibliotecas.</p>
+                    <br>
+                    <center>
+                        <img src="imagenes_2/frame1.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Uso de Python</summary>
+                <div class="content-details">
+                    <p>El uso de Python consiste en la aplicación de este lenguaje de programación de alto nivel para desarrollar soluciones eficientes, claras 
+                        y escalables en distintos ámbitos tecnológicos. Python se utiliza para la creación de programas, desarrollo web, análisis y manejo de 
+                        bases de datos, automatización de procesos, inteligencia artificial, ciencia de datos y cómputo científico, gracias a su sintaxis sencilla 
+                        y su amplia variedad de bibliotecas.</p>
+                    <br>
+                    <center>
+                        <img src="imagenes_2/frame2.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Operadores de comparación</summary>
+                <div class="content-details">
+                    <p>Los operadores de comparación son símbolos utilizados en programación para comparar dos valores y determinar la relación entre ellos. El 
+                        resultado de la comparación es siempre un valor lógico: verdadero (True) o falso (False). Son fundamentales para tomar decisiones, controlar 
+                        flujos de ejecución y evaluar condiciones en algoritmos.</p>
+                    <center>
+                        <img src="imagenes_2/frame3.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Operadores condicionales</summary>
+                <div class="content-details">
+                    <p>Los operadores condicionales son elementos fundamentales de la programación que permiten tomar decisiones lógicas dentro de un programa. 
+                        Se utilizan para evaluar una condición y ejecutar distintas acciones según si esta se cumple o no. Gracias a ellos, el código deja de ser 
+                        lineal y se vuelve dinámico, flexible y funcional.</p>
+                    <center>
+                        <img src="imagenes_2/frame4.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Programa becas - Python</summary>
+                <div class="content-details">
+                    <p>Un programa de becas en Python se utiliza para evaluar si un estudiante cumple ciertos criterios (promedio, ingreso familiar, edad, etc.) y 
+                        tomar una decisión automática usando operadores de comparación y condicionales. Simple, eficiente y escalable.</p>
+                    <center>
+                        <img src="imagenes_2/frame5.png">
+                        <img src="imagenes_2/frame6.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>operador condicional if</summary>
+                <div class="content-details">
+                    <p>En Python, la instrucción if es una estructura condicional que permite tomar decisiones dentro de un programa. Evalúa una condición lógica y, 
+                        si esta se cumple, ejecuta un bloque de instrucciones; si no, puede ejecutar una alternativa mediante else o elif.</p>
+                    <center>
+                        <img src="imagenes_2/frame9.png ">
+                        <img src="imagenes_2/frame10.png ">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>operador condicional match</summary>
+                <div class="content-details">
+                    <p>En Python, la instrucción match es una estructura de control condicional que permite comparar un valor con múltiples patrones 
+                        posibles y ejecutar un bloque de código según el caso que coincida. Funciona de manera similar a un switch, pero es más potente y flexible.
+                        <br>Su objetivo es simplificar la toma de decisiones cuando se tienen varias opciones, haciendo el código más claro, ordenado y legible.</p>
+                    <center>
+                        <img src="imagenes_2/frame11.png ">
+                        <img src="imagenes_2/frame12.png ">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>bucle while</summary>
+                <div class="content-details">
+                    <p>El bucle while es una estructura de control que permite repetir un bloque de instrucciones mientras una condición sea verdadera. Su ejecución depende 
+                        directamente de la evaluación lógica de dicha condición, por lo que se utiliza cuando no se conoce de antemano cuántas veces debe repetirse un proceso, 
+                        pero sí cuándo debe detenerse.</p>
+                    <center>
+                        <img src="imagenes_2/frame13.png ">
+                        <img src="imagenes_2/frame14.png ">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>bucle for</summary>
+                <div class="content-details">
+                    <p>El bucle for es una estructura de control que permite repetir un bloque de instrucciones un número determinado de veces, recorriendo de forma ordenada 
+                        una secuencia de datos (como listas, rangos o cadenas). Se utiliza cuando el número de iteraciones está claramente definido, facilitando la 
+                        automatización de tareas repetitivas de manera eficiente y controlada.</p>
+                    <center>
+                        <img src="imagenes_2/frame15.png ">
+                    </center>
+                </div>
+            </details>
+
+            <br>
+            <h3>Segundo parcial - Prácticas</h3> 
+            <h3>Paginas HTML</h3>
+            <br>
+            
+            <details>
+                <summary>HTML</summary>
+                <div class="content-details">
+                    <p>HTML (HyperText Markup Language) es el lenguaje base para estructurar páginas web. Define la organización del contenido —títulos, párrafos, enlaces, 
+                        imágenes y formularios— mediante etiquetas, permitiendo que los navegadores interpreten y muestren la información de forma correcta.</p>
+                    <center>
+                        <img src="imagenes_2/frame16.png">
+                    </center>
+                </div>
+            </details>
+            
+                        <details>
+                <summary>Primera pagina HTML</summary>
+                <div class="content-details">
+                    <p>En la primera pagina HTML lo que se busca es entender la estructura basica de una pagina web, desde el encabezado hasta los tipos de texto.</p>
+                    <center>
+                        <img src="imagenes_2/frame17.png">
+                        <img src="imagenes_2/frame18.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Tipos de H</summary>
+                <div class="content-details">
+                    <p>En HTML, los tipos de “h” son las etiquetas de encabezado y van de < h1> a < h6>. Se usan para estructurar el contenido de una página de forma jerárquica.
+                    <br>< h1>: Título principal. El más importante. Normalmente uno por página.<br>< h2>: Subtítulo de primer nivel.<br>< h3>: Subtítulo de segundo nivel.
+                    <br>< h4>: Encabezado de menor jerarquía.<br>< h5>: Uso poco frecuente, detalles muy específicos.<br>< h6>: El nivel más bajo de importancia.</p>
+                    <center>
+                        <img src="imagenes_2/frame19.png">
+                        <img src="imagenes_2/frame20.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>G.U.I (interfaz grafica del usuario)</summary>
+                <div class="content-details">
+                    <p>Una G.U.I. (Graphical User Interface) o interfaz gráfica de usuario es el entorno visual que permite a una persona interactuar con un sistema 
+                        informático de manera intuitiva, mediante ventanas, botones, menús, iconos y formularios, sin necesidad de usar comandos de texto.</p>
+                    <center>
+                        <img src="imagenes_2/frame21.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Tkinter</summary>
+                <div class="content-details">
+                    <p>Tkinter es una biblioteca estándar de Python utilizada para crear interfaces gráficas de usuario (GUI) de forma sencilla y estructurada. Permite 
+                        desarrollar aplicaciones con ventanas, botones, etiquetas, cuadros de texto y menús, facilitando la interacción entre el usuario y el programa 
+                        sin depender de la línea de comandos.</p>
+                    <center>
+                        <img src="imagenes_2/frame22.png">
+                        <img src="imagenes_2/frame23.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Label</summary>
+                <div class="content-details">
+                    <p>Un Label en Tkinter es un componente de la interfaz gráfica de usuario (GUI) que se utiliza para mostrar texto, imágenes o información estática 
+                        dentro de una ventana. Su función principal es informar al usuario, no recibir datos ni ejecutar acciones.</p>
+                    <center>
+                        <img src="imagenes_2/frame24.png">
+                        <img src="imagenes_2/frame25.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Tablas html</summary>
+                <div class="content-details">
+                    <p>Las tablas en HTML se utilizan para organizar y presentar información en filas y columnas de forma estructurada y legible. Son ideales para datos 
+                        comparativos, listados y reportes. Su correcta implementación mejora la claridad, accesibilidad y mantenimiento del contenido web.</p>
+                    <center>
+                        <img src="imagenes_2/frame26.png">
+                        <img src="imagenes_2/frame27.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>CSS en html</summary>
+                <div class="content-details">
+                    <p>CSS en HTML es el mecanismo de diseño y presentación que permite controlar la apariencia visual de una página web creada con HTML. Mientras HTML 
+                        define la estructura (qué es cada elemento), CSS define el cómo se ve: colores, tamaños, tipografías, márgenes, alineación y diseño responsivo.</p>
+                    <center>
+                        <img src="imagenes_2/frame28.png">
+                        <img src="imagenes_2/frame29.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Frames en html</summary>
+                <div class="content-details">
+                    <p>Los frames en HTML son una técnica clásica que permitía dividir una ventana del navegador en varias secciones, donde cada sección cargaba un documento 
+                        HTML distinto de forma independiente. Se utilizaban para mostrar, por ejemplo, un menú fijo y un contenido cambiante en la misma pantalla.</p>
+                    <center>
+                        <img src="imagenes_2/frame30.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Anclas en html</summary>
+                <div class="content-details">
+                    <p>Las anclas en HTML son elementos que permiten crear enlaces de navegación dentro de una misma página o hacia otra página o recurso externo. Se 
+                        implementan con la etiqueta < a> y se utilizan para dirigir al usuario a una sección específica, a otro documento, a un archivo o a un sitio web.</p>
+                    <center>
+                        <img src="imagenes_2/frame31.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Proyecto final - maquina expendedora con tkinter</summary>
+                <div class="content-details">
+                    <p>Una máquina expendedora con Tkinter es un proyecto de programación que consiste en diseñar una interfaz gráfica (GUI) en Python para simular el 
+                        funcionamiento de una máquina real. El objetivo es integrar lógica de programación, control de eventos y diseño visual, todo en un solo sistema 
+                        funcional.</p>
+                    <center>
+                        <img src="imagenes_2/frame32.png">
+                        <img src="imagenes_2/frame33.png">
+                    </center>
+                </div>
+            </details>
+            
+            <h3>Tercer parcial - Prácticas</h3> 
+            <h3>React, pagina personal y empresarial</h3>
+            <br>
+            
+            <details>
+                <summary>React</summary>
+                <div class="content-details">
+                    <p>React es una biblioteca de JavaScript utilizada para construir interfaces de usuario dinámicas y eficientes, especialmente en aplicaciones web. 
+                        Se basa en el uso de componentes reutilizables y en la actualización automática de la vista mediante un DOM virtual, lo que mejora el rendimiento 
+                        y la organización del código.</p>
+                    <center>
+                        <img src="imagenes_2/frame34.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Instalación de React</summary>
+                <div class="content-details">
+                    <p>React es una biblioteca de JavaScript utilizada para crear interfaces de usuario dinámicas, especialmente en aplicaciones web, basada en componentes 
+                        reutilizables que actualizan la pantalla de forma eficiente según los cambios de datos.</p>
+                        <br>
+                    <center>
+                        <p>Para instalar React deberas entrar a la pagina de node js e ir a descargar, seguido seleccionaras el tipo de navegador que tienes.</p>
+                        <img src="imagenes_2/frame35.png">
+                    </center>
+                    <center>
+                        <p>Después iras a documentos y lo seleccionaras dando doble click,darás a todo next con base a tus necesidades para después instalar y finalizar</p>
+                        <img src="imagenes_2/frame36.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>React en VS Code</summary>
+                <div class="content-details">
+                    <p>React en VS Code es el uso del editor Visual Studio Code como entorno de desarrollo para crear aplicaciones con React, aprovechando extensiones, 
+                        terminal integrada y herramientas de depuración que facilitan escribir, organizar y ejecutar código JavaScript basado en componentes de forma 
+                        eficiente y profesional.</p>
+                        <br>
+                    <center>
+                        <p>Para instalar react en tu Visual Studio Code primero debes ingresar a la terminal y colocar esto.</p>
+                        <img src="imagenes_2/frame37.png">
+                        <br>
+                        <p>Seguido de esto y todos estos pasos más.</p>
+                        <img src="imagenes_2/frame37.png">
+                        <img src="imagenes_2/frame38.png">
+                        <br>
+                        <img src="imagenes_2/frame39.png">
+                        <img src="imagenes_2/frame40.png">
+                        <br>
+                        <img src="imagenes_2/frame41.png">
+                        <img src="imagenes_2/frame42.png">
+                        <br>
+                        <img src="imagenes_2/frame43.png">
+                        <img src="imagenes_2/frame44.png">
+                        <br>
+                        <img src="imagenes_2/frame45.png">
+                        <img src="imagenes_2/frame46.png">
+                        <br>
+                        <img src="imagenes_2/frame47.png">
+                        <img src="imagenes_2/frame48.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Fromulario web</summary>
+                <div class="content-details">
+                    <p>Un formulario web GET y POST es un mecanismo de HTML que permite enviar datos del usuario desde una página web a un servidor.</p>
+                    <p>GET: envía los datos a través de la URL. Es rápido y útil para consultas simples, pero no es seguro ni adecuado para información sensible.</p>
+                    <p>POST: envía los datos de forma interna en la solicitud. Es más seguro, admite mayor cantidad de información y se usa para registros, inicios de 
+                        sesión o envíos de datos importantes.</p>
+                    <center>
+                        <img src="imagenes_2/frame50.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Pagina empresarial</summary>
+                <div class="content-details">
+                    <p>La pagina empresarial se llevo a cabo durante los tres parciales donde lo que se busco fue la creación de un medio digital(pagina web), con el fin de 
+                        promocionar un negocio local llevando no solo al negocio, si no que tambien al emprendedor fuera de las fronteras haciendo publicidad en entornos,haci como
+                        localidades aledañas a través de programas tanto html como React.
+                    </p>
+                    <center>
+                        <img src="imagenes_2/frame51.png">
+                    </center>
+                    <center>
+                        <img src="imagenes_2/frame52.png">
+                    </center>
+                    <center>
+                        <img src="imagenes_2/frame53.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Pagina personal</summary>
+                <div class="content-details">
+                    <p>La página personal se desarrolló durante el periodo final del segundo parcial y a lo largo del tercer parcial completo, con el objetivo de evidenciar los 
+                        conocimientos adquiridos durante el tercer semestre en las distintas asignaturas.
+                        <br>
+                        Este proyecto consistió en la creación de una página web en la que se integran actividades, proyectos y videos guía que sirvieron como apoyo y 
+                        referencia académica a lo largo de dicho periodo, permitiendo aplicar de manera práctica los aprendizajes obtenidos.
+                    </p>
+                    <center>
+                        <img src="imagenes_2/frame54.png">
+                    </center>
+                    <center>
+                        <img src="imagenes_2/frame55.png">
+                    </center>
+                    <center>
+                        <img src="imagenes_2/frame56.png">
+                    </center>
+                    <center>
+                        <img src="imagenes_2/frame57.png">
+                    </center>
+                </div>
+            </details>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/WatTqrq8kQQ" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Curso de Python</h3>
+                        <p>Curso de capacitación general sobre python</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/MJkdaVFHrto" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>python y tkinter</h3>
+                        <p>Uso basico de tkinter para contenido grafico</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/9imqvtAGcqk" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Curso de HTML desde cero</h3>
+                        <p>Curso de capacitación para HTML basico.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/wGxDfSWC4Ww" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Aprendizaje sobre React en 15 minutos</h3>
+                        <p>Curso rapido sobre conceptos basicos sobre react.</p>
+                    </div>
+                </div>
+
+    <div class="video-card">
+        <iframe src="https://www.tiktok.com/embed/v2/7385130397597764897" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <div class="video-info">
+            <h3>HTML más facil.</h3>
+            <p>Uso más producto de HTML.</p>
+        </div>
+    </div>
+</div>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+    </section>
+    </div>
+    <center>
+        <a href="index.html" target="_parent" class="btn-principal"> Regresar a página principal</a>
+    </center>
+        <footer>
+        <p>&copy; 2025 CECyTEM Cuautitlán - Pagina personal</p>
+        <p>Educación Media Superior de Calidad</p>
+    </footer>
+    </body>
+</html>

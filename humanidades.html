@@ -1,0 +1,620 @@
+<html>
+    <head>
+        <title>
+            pagina Cecytem Cuautitlán - pagina personal
+        </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #F5F5DC;
+        }
+
+        .gov-bar {
+            background: #9d2449;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .header-section {
+            position: relative;
+            height: 400px;
+            background-image: url('imagenes/portada_cecytem.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            padding: 28px;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: auto;
+        }
+
+        .main-nav {
+            background: #9d2449;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: static;
+            z-index: 100;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .main-nav li {
+            margin: 0;
+        }
+
+        .main-nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background 0.3s;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .main-nav a:hover {
+            background: #7a1c38;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .btn-regresar {
+            display: inline-block;
+            background: #9d2449;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-regresar:hover {
+            background: #7a1c38;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background: #0e6a3d;
+            color: white;
+            padding: 12px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 30px 0;
+            transition: background 0.3s;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .btn-principal:hover {
+            background: #0a5230;
+        }
+
+        center {
+            text-align: center;
+        }
+
+        details {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        summary {
+            background: #9d2449;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            list-style: none;
+            transition: background 0.3s;
+        }
+
+        summary:hover {
+            background: #7a1c38;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: " ▼";
+            float: right;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .content-details {
+            padding: 20px;
+            background: white;
+            border-top: 2px solid #f5f5f5;
+        }
+
+        .content-details p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .content-details img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .content-details a {
+            color: #9d2449;
+            font-weight: 500;
+        }
+
+        .content-details a:hover {
+            color: #7a1c38;
+        }
+
+        h1 {
+            color: #0e6a3d;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #9d2449;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #0e6a3d;
+            font-size: 1.8em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 5px solid #9d2449;
+        }
+
+        h3 {
+            color: #9d2449;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        footer {
+            background: #9d2449;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            display: block;
+            border: none;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+            color: #9d2449;
+        }
+
+        .video-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="gov-bar">
+        CECyTEM Cuautitlán
+    </div>
+
+    <div class="header-section">
+        <div class="logo-circle">
+            <img src="imagenes/logo_cecytem.png" alt="Logo CECyTEM">
+        </div>
+    </div>
+
+        <nav class="main-nav">
+            <section id="regresar"></section>
+            <ul>
+            <a href="#materia">Materia</a>
+            <a href="#objetivo">Objetivo</a>
+            <a href="#evaluacion">Evaluación, proposito y proyecto final</a>
+            <a href="#temario">Temario:Tercer semestre - Humanidades II</a>
+            </ul>
+        </nav>
+        <br>
+        <div class="container">
+        <center>
+        <h1>Humanidades II</h1>
+        </center>
+        <br>
+        <section id="materia">
+            <h2>Materia</h2>
+            <br>
+            <p>Humanidades es una asignatura curricular del plan de estudios del CECyTEM, impartida por la docente Itzel Mariel Nava Cortés, cuyo objetivo es 
+                desarrollar y fortalecer las habilidades cognitivas, analíticas y comunicativas del alumno para comprender, analizar y reflexionar sobre 
+                fenómenos sociales, culturales e históricos, así como expresarse de manera oral y escrita con claridad y fundamento, aplicando el pensamiento 
+                humanístico en contextos académicos, sociales y ciudadanos.
+            </p>
+            <br>
+            <p>Durante el tercer semestre, esta asignatura tiene como propósito desarrollar en el alumnado una comprensión profunda de la diversidad de opiniones y 
+                perspectivas desde las cuales puede analizarse un mismo fenómeno social y cultural, fomentando el pensamiento crítico, la reflexión informada y la 
+                argumentación, mediante el análisis de textos, la discusión de ideas y la construcción de posturas propias, con claridad y sustento en contextos 
+                académicos y sociales.
+            </p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <br>
+        <br>
+        <section id="objetivo">
+            <h2>Objetivo</h2>
+            <br>
+            <p>Desarrollar en el alumnado la capacidad de pensamiento crítico, análisis y comunicación en inglés, mediante la comprensión, 
+                interpretación y producción de textos en este idioma, que le permitan argumentar ideas con claridad, valorar la diversidad 
+                de opiniones y expresar de manera eficaz distintos puntos de vista en contextos académicos y sociales.</p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <section id="evaluacion">
+            <h2>Evaluación y proyecto final</h2>
+            <br>
+            <p>• Examen: 50%.</p>
+            <p>• Cuaderno: 20%.</p>
+            <p>• Proyecto: 30%.</p>
+            <br>
+            <h2>Proyecto final (En los tres parciales)</h2>
+            <p>Podcast</p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <br>
+
+        <section id="temario">
+            <h2>Temario tercer semestre - Humanidades II</h2>
+            <br>
+            <h2>Primer parcial - Prácticas</h2> 
+            <h3>Contratos y normativas</h3>
+            <br>
+            
+            <details>
+                <summary>Contrato</summary>
+                <div class="content-details">
+                    <p>Un contrato es un acuerdo legal entre dos o más partes que establece derechos y obligaciones de manera clara y voluntaria. 
+                        Su finalidad es regular una relación jurídica, garantizando el cumplimiento de lo pactado conforme a la ley. Para que sea válido, 
+                        debe contar con consentimiento, objeto lícito y causa legal.</p>
+                    <br>
+                    <center>
+                        <img src="imagenes_2/humanidades1.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Contrato social - Thomas Hobbes</summary>
+                <div class="content-details">
+                    <p>Para Thomas Hobbes, el contrato social es un acuerdo mediante el cual los individuos, que en el estado de naturaleza viven en un entorno 
+                        de conflicto permanente —“guerra de todos contra todos”—, ceden su libertad al Estado para garantizar seguridad y orden.
+                        <br>Este pacto justifica la existencia de un poder fuerte y centralizado (el soberano), cuya autoridad es necesaria para 
+                        evitar el caos y asegurar la supervivencia colectiva.</p>
+                    <br>
+                    <center>
+                        <img src="imagenes_2/humanidades2.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Contrato social - Jhon Loke</summary>
+                <div class="content-details">
+                    <p>Para John Locke, el contrato social es un acuerdo mediante el cual los individuos forman un gobierno para proteger sus derechos naturales: vida, 
+                        libertad y propiedad. A diferencia de Hobbes, Locke sostiene que el poder del Estado no es absoluto, sino limitado y condicionado al consentimiento 
+                        de los gobernados.
+                        <br>Si el gobierno incumple su función y viola esos derechos, la sociedad tiene el derecho de modificarlo o sustituirlo.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades3.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Contrato social - Jean Jacques Rousseau</summary>
+                <div class="content-details">
+                    <p>Para Jean-Jacques Rousseau, el contrato social es un acuerdo mediante el cual los individuos se unen para formar una comunidad política 
+                        basada en la voluntad general, renunciando al interés individual en favor del bien común. La soberanía reside en el pueblo, y las leyes 
+                        deben expresar esa voluntad colectiva para garantizar igualdad y libertad.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades4.png">
+                    </center>
+                </div>
+            </details>
+
+            <br>
+            <h2>Segundo parcial - Prácticas</h2> 
+            <h3>Partidos y autoritarismo</h3>
+            <br>
+            
+            <details>
+                <summary>Autoritarismo</summary>
+                <div class="content-details">
+                    <p>El autoritarismo es una forma de gobierno o ejercicio del poder caracterizada por la concentración de la autoridad en una persona 
+                        o grupo, con limitada participación ciudadana, restricción de libertades y escaso respeto a la división de poderes. Las decisiones 
+                        se imponen desde arriba, priorizando el orden y el control sobre el consenso y la deliberación.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades5.png">
+                    </center>
+                </div>
+            </details>
+            
+                        <details>
+                <summary>Sistema politico</summary>
+                <div class="content-details">
+                    <p>Un sistema político es el conjunto de instituciones, normas, actores y procesos mediante los cuales una sociedad organiza, ejerce y 
+                        distribuye el poder, toma decisiones colectivas y regula la convivencia social. Define cómo se gobierna, quién decide, bajo qué 
+                        reglas y con qué límites.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades6.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Fascismo italiano - Benito Mussolini</summary>
+                <div class="content-details">
+                    <p>El fascismo italiano, liderado por Benito Mussolini, fue un sistema político autoritario y totalitario surgido en Italia a inicios del siglo XX. 
+                        Se caracterizó por la concentración absoluta del poder en el Estado, el liderazgo carismático y centralizado, el nacionalismo extremo, el rechazo 
+                        a la democracia liberal, al pluralismo político y al socialismo, así como por el uso sistemático de la propaganda y la represión.
+                        <br>El Estado se colocó por encima del individuo, promoviendo la obediencia, el orden y la disciplina como valores centrales, bajo la idea de 
+                        restaurar la grandeza nacional.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades7.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Max Weber y su influencia</summary>
+                <div class="content-details">
+                    <p>Max Weber fue un sociólogo y pensador alemán clave para las ciencias sociales modernas. Su mayor influencia radica en el análisis del poder, 
+                        la autoridad y la burocracia. Clasificó la autoridad en tradicional, carismática y legal-racional, y explicó cómo la burocracia se convirtió 
+                        en la forma dominante de organización en los Estados modernos.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades8.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Opresión</summary>
+                <div class="content-details">
+                    <p>La opresión es una situación de sometimiento sistemático en la que un grupo ejerce poder injusto y prolongado sobre otro, limitando sus derechos, 
+                        libertades y oportunidades. Puede ser política, social, económica o cultural.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades9.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Esclavitud y sometimiento</summary>
+                <div class="content-details">
+                    <p>La esclavitud y el sometimiento son formas extremas de dominación social en las que una persona o grupo pierde su libertad, autonomía y derechos, 
+                        quedando bajo el control absoluto de otro. La esclavitud implica la posesión legal o de facto de seres humanos como propiedad, mientras que el 
+                        sometimiento abarca mecanismos de control político, económico o cultural que obligan a la obediencia mediante la fuerza, la coerción o la 
+                        dependencia.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades10.png">
+                    </center>
+                </div>
+            </details>
+            
+            <h2>Tercer parcial - Prácticas</h2> 
+            <h3>Sociedad y visualización</h3>
+            <br>
+            
+            <details>
+                <summary>Imaginarios sociales</summary>
+                <div class="content-details">
+                    <p>Los imaginarios sociales son el conjunto de ideas, símbolos y creencias compartidas que una sociedad utiliza para interpretar la realidad, 
+                        justificar el poder y definir lo “normal”. Influyen en cómo pensamos la política, la autoridad, la identidad y el futuro.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades11.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Cornelius Castoriadis</summary>
+                <div class="content-details">
+                    <p>Cornelius Castoriadis fue un filósofo y pensador social que desarrolló el concepto de los imaginarios sociales, entendidos como el conjunto 
+                        de significados, ideas y valores que una sociedad crea para darse sentido y organizarse. Para Castoriadis, la sociedad no solo obedece leyes 
+                        económicas o racionales, sino que se autocrea constantemente a través de estos imaginarios.
+                        <br>Su influencia radica en plantear que las sociedades pueden cuestionar sus propias instituciones y transformarse, dando lugar a la autonomía, 
+                        es decir, a ciudadanos capaces de pensar críticamente y redefinir su sistema político, social y cultural. </p>
+                    <center>
+                        <img src="imagenes_2/humanidades12.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Sociedad - sesgo</summary>
+                <div class="content-details">
+                    <p>El sesgo en la sociedad se refiere a las distorsiones sistemáticas en la percepción, el juicio y el comportamiento colectivo, originadas por creencias, 
+                        valores, prejuicios o intereses dominantes. Estos sesgos influyen en cómo se interpreta la realidad, cómo se toman decisiones y cómo se incluye o 
+                        excluye a ciertos grupos, muchas veces de forma inconsciente.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades13.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Proceso colectivo y toma de decisiones</summary>
+                <div class="content-details">
+                    <p>El proceso colectivo y la toma de decisiones se refieren al conjunto de dinámicas mediante las cuales un grupo, comunidad o sociedad analiza opciones, 
+                        delibera y define acciones comunes. Este proceso implica intercambio de ideas, negociación, construcción de consensos o mayorías, y está influido por 
+                        factores como valores compartidos, normas sociales, liderazgo, poder e intereses colectivos.</p>
+                    <center>
+                        <img src="imagenes_2/humanidades14.png">
+                    </center>
+                </div>
+            </details>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/gSsAIr4Sv-k" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Contrato social - Jean-Jacques Rousseau</h3>
+                        <p>Análisis sobre un contrato social y pensamiento politico.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/pDK0sRLJ-qw" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>¿Qué es el socialismo y como afecta a la sociedad</h3>
+                        <p>Análisis sobre el bloque económico, social y politico.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/VAuv6D8QaTo" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Autoritarismo.</h3>
+                        <p>Análisis sobre la forma de ejerces poder.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/6aYynBm_u8g" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Sometimiento y esclavitud</h3>
+                        <p>Análisis sobre la diferencia entre el sometimiento y la esclavitud.</p>
+                    </div>
+                </div>
+
+    <div class="video-card">
+        <iframe src="https://www.tiktok.com/embed/v2/7330599813991369990" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <div class="video-info">
+            <h3>¿Qué es el capitalismo?.</h3>
+            <p>Enseñansa del que es el capitalismo.</p>
+        </div>
+    </div>
+</div>
+
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+    </section>
+    </div>
+    <center>
+        <a href="index.html" target="_parent" class="btn-principal"> Regresar a página principal</a>
+    </center>
+        <footer>
+        <p>&copy; 2025 CECyTEM Cuautitlán - Pagina personal</p>
+        <p>Educación Media Superior de Calidad</p>
+    </footer>
+    </body>
+</html>
