@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .gov-bar {
+            background: #9d2449;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+            .reloj {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: right;
+            line-height: 1.4;
+        }
+
+        .reloj .hora {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .reloj .fecha {
+            font-size: 12px;
+        }
+        .header-section {
+            position: relative;
+            height: calc(100vh - 40px);
+            background-image: url('imagenes/portada_cecytem.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            padding: 28px;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="gov-bar">
+        Cecytem Cuautitlán
+        
+        <div class="reloj">
+            <div class="hora" id="hora">00:00:00</div>
+            <div class="fecha" id="fecha">Cargando...</div>
+        </div>
+    </div>
+
+    <div class="header-section">
+        <div class="logo-circle">
+            <img src="imagenes/logo_cecytem.png" alt="Logo CECyTEM">
+        </div>
+    </div>
+
+    <script>
+        function actualizarReloj() {
+            const ahora = new Date();
+            
+            let horas = ahora.getHours();
+            let minutos = ahora.getMinutes();
+            let segundos = ahora.getSeconds();
+            
+            horas = horas < 10 ? '0' + horas : horas;
+            minutos = minutos < 10 ? '0' + minutos : minutos;
+            segundos = segundos < 10 ? '0' + segundos : segundos;
+            
+            document.getElementById('hora').textContent = horas + ':' + minutos + ':' + segundos;
+            
+            const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+            const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
+                          'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            
+            const diaSemana = dias[ahora.getDay()];
+            const dia = ahora.getDate();
+            const mes = meses[ahora.getMonth()];
+            const año = ahora.getFullYear();
+            
+            document.getElementById('fecha').textContent = diaSemana + ', ' + dia + ' de ' + mes + ' de ' + año;
+        }
+        
+        actualizarReloj();
+        setInterval(actualizarReloj, 1000);
+    </script>
+</body>
+</html>

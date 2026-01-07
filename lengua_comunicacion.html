@@ -1,0 +1,597 @@
+<html>
+    <head>
+        <title>
+            pagina Cecytem Cuautitlán - pagina personal
+        </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #F5F5DC;
+        }
+
+        .gov-bar {
+            background: #9d2449;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .header-section {
+            position: relative;
+            height: 400px;
+            background-image: url('imagenes/portada_cecytem.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-circle {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            padding: 28px;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: auto;
+        }
+
+        .main-nav {
+            background: #9d2449;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: static;
+            z-index: 100;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .main-nav li {
+            margin: 0;
+        }
+
+        .main-nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background 0.3s;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .main-nav a:hover {
+            background: #7a1c38;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .btn-regresar {
+            display: inline-block;
+            background: #9d2449;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-regresar:hover {
+            background: #7a1c38;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background: #0e6a3d;
+            color: white;
+            padding: 12px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 30px 0;
+            transition: background 0.3s;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .btn-principal:hover {
+            background: #0a5230;
+        }
+
+        center {
+            text-align: center;
+        }
+
+        details {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        summary {
+            background: #9d2449;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            list-style: none;
+            transition: background 0.3s;
+        }
+
+        summary:hover {
+            background: #7a1c38;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: " ▼";
+            float: right;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .content-details {
+            padding: 20px;
+            background: white;
+            border-top: 2px solid #f5f5f5;
+        }
+
+        .content-details p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .content-details img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .content-details a {
+            color: #9d2449;
+            font-weight: 500;
+        }
+
+        .content-details a:hover {
+            color: #7a1c38;
+        }
+
+        h1 {
+            color: #0e6a3d;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #9d2449;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #0e6a3d;
+            font-size: 1.8em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 5px solid #9d2449;
+        }
+
+        h3 {
+            color: #9d2449;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        footer {
+            background: #9d2449;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            display: block;
+            border: none;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+            color: #9d2449;
+        }
+
+        .video-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="gov-bar">
+        CECyTEM Cuautitlán
+    </div>
+
+    <div class="header-section">
+        <div class="logo-circle">
+            <img src="imagenes/logo_cecytem.png" alt="Logo CECyTEM">
+        </div>
+    </div>
+
+        <nav class="main-nav">
+            <section id="regresar"></section>
+            <ul>
+            <a href="#materia">Materia</a>
+            <a href="#objetivo">Objetivo</a>
+            <a href="#evaluacion">Evaluación, proposito y proyecto final</a>
+            <a href="#temario">Temario:Tercer semestre-Lengua y comunicación</a>
+            </ul>
+        </nav>
+        <br>
+        <div class="container">
+        <center>
+        <h1>Lengua y Comunicación III</h1>
+        </center>
+        <br>
+        <section id="materia">
+            <h2>Materia</h2>
+            <br>
+            <p>Lengua y Comunicación es una asignatura del plan de estudios del CECyTEM, integrada dentro de las asignaturas curriculares. Es impartida por 
+                la docente Hilda Jiménez Zamora y tiene como objetivo fortalecer la capacidad cognitiva del alumnado para pensar, analizar y redactar ensayos 
+                sobre temas diversos.
+            </p>
+            <br>
+            <p>Durante el tercer semestre, esta materia busca desarrollar una comprensión profunda de la diversidad de opiniones y perspectivas desde las cuales 
+                puede abordarse un mismo tema, fomentando el pensamiento crítico y la expresión argumentativa.
+            </p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <br>
+        <br>
+        <section id="objetivo">
+            <h2>Objetivo</h2>
+            <br>
+            <p>Desarrollar en el alumnado la capacidad de pensamiento crítico, análisis y expresión escrita, mediante la comprensión, interpretación y producción de textos,
+                especialmente ensayos, que le permitan argumentar ideas con claridad, valorar la diversidad de opiniones y comunicar de manera eficaz distintos puntos de vista 
+                en contextos académicos y sociales.</p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <section id="evaluacion">
+            <h2>Evaluación, proposito y proyecto final</h2>
+            <br>
+            <p>• Examen: 50%.</p>
+            <p>• Carpeta: 30%.</p>
+            <p>• Proyecto: 20%.</p>
+            <br>
+            <h2>Proposito</h2>
+            <p>Pensar</p>
+            <p>Hablar</p>
+            <p>Escuchar</p>
+            <p>Escribir</p>
+            <p>Leer</p>
+            <br>
+            <h2>Proyecto final (En los tres parciales)</h2>
+            <p>Ensayo</p>
+        </section>
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+        <br>
+
+        <section id="temario">
+            <h2>Temario tercer semestre-Lengua y comunicación</h2>
+            <br>
+            <h2>Primer parcial - Prácticas</h2> 
+            <h3>Tipos de ensayos</h3>
+            <br>
+            
+            <details>
+                <summary>¿Qué es un ensayo?</summary>
+                <div class="content-details">
+                    <p>Un ensayo es un texto escrito en prosa que analiza, interpreta o evalúa un tema. 
+                    Se caracteriza por ser un escrito serio y fundamentado que sintetiza un tema significativo.</p>
+                    <br>
+                    <center>
+                        <img src="imagenes/ensayo1.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Ensayo: México-pinche (Emilio Pacheco)</summary>
+                <div class="content-details">
+                    <p>Análisis del ensayo de José Emilio Pacheco sobre la identidad mexicana y el uso 
+                    del lenguaje coloquial en la cultura nacional.</p>
+                    <br>
+                    <center>
+                        <img src="imagenes/ensayo2.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Ensayo: Idea propia-grosería</summary>
+                <div class="content-details">
+                    <p>Creación de un ensayo propio sobre el tema de las groserías y su impacto en la comunicación.</p>
+                    <center>
+                        <img src="imagenes/ensayo3.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Ensayo: La muerte (Octavio Paz)</summary>
+                <div class="content-details">
+                    <p>Análisis del ensayo de Octavio Paz sobre su postura ante la muerte en la cultura mexicana.</p>
+                    <center>
+                        <img src="imagenes/ensayo4.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Ensayo: Idea propia-La muerte</summary>
+                <div class="content-details">
+                    <p>Creación de un ensayo personal sobre la muerte desde una perspectiva personal y tomando como referencia el ensayo de Octavio Paz.</p>
+                    <center>
+                        <img src="imagenes/ensayo5.png">
+                    </center>
+                </div>
+            </details>
+
+            <br>
+            <h2>Segundo parcial - Prácticas</h2> 
+            <h3>Mejor análisis y redacción</h3>
+            <br>
+            
+            <details>
+                <summary>Ensayo: Historia de los tatuajes</summary>
+                <div class="content-details">
+                    <p>Análisis del ensayo "Historia de los tatuajes" de la página <a href="https://culturainquieta.com/estilo-de-vida/origen-del-tatuaje-la-historia-de-una-moda-que-no-pasa/" target="_blank">"Origen del tatuaje"</a>.</p>
+                    <center>
+                        <img src="imagenes/ensayo6.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Ensayo: Idea propia-tatuajes</summary>
+                <div class="content-details">
+                    <p>Creación de un ensayo personal sobre mi postura ante los tatuajes y mi percepción ante personas que poseen tatuajes.</p>
+                    <center>
+                        <img src="imagenes/ensayo7.png">
+                        <img src="imagenes/ensayo8.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Ensayo: John el esquizofrénico</summary>
+                <div class="content-details">
+                    <p>Análisis de la canción "John el esquizofrénico", trabajando el análisis profundo y comprensión ante temas sensibles.</p>
+                    <center>
+                        <img src="imagenes/ensayo9.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Ensayo: Idea propia-Salud mental</summary>
+                <div class="content-details">
+                    <p>Redacción del ensayo con base al tema principal el cual es la canción "John el esquizofrénico", analizando de manera profunda la importancia 
+                        de la salud mental.</p>
+                    <center>
+                        <img src="imagenes/ensayo10.png">
+                        <img src="imagenes/ensayo11.png">
+                    </center>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Ensayo: Reacción de una canción</summary>
+                <div class="content-details">
+                    <p>Análisis y reacción de una canción de nuestro agrado con la misma finalidad de no solo comprender la salud mental, sino que también diferenciar entre un 
+                        ensayo y una reseña.
+                    </p>
+                    <center>
+                        <img src="imagenes/ensayo12.png">
+                        <img src="imagenes/ensayo13.png">
+                    </center>
+                </div>
+            </details>
+            
+            <h2>Tercer parcial - Prácticas</h2> 
+            <h3>Practica y analisis general</h3>
+            <br>
+            
+            <details>
+                <summary>Video corto - Anna</summary>
+                <div class="content-details">
+                    <p>Análisis del cortometraje "Alma" de la página <a href="https://www.youtube.com/watch?v=dUH5RnBESgc" target="_blank">Youtube</a>.</p>
+                    <center>
+                        <img src="imagenes/ensayo14.jpeg">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Ensayo: Video corto - Anna</summary>
+                <div class="content-details">
+                    <p>Creación del ensayo con base al cortometraje "Alma", donde no solo se busca analizar el video, si no que tambien cuestionarse el porque de sus acciones</p>
+                    <center>
+                        <img src="imagenes/ensayo15.png">
+                        <img src="imagenes/ensayo16.png">
+                    </center>
+                </div>
+            </details>
+
+            <details>
+                <summary>Obras de arte - Mural "Del Porfirismo a la Revolución"</summary>
+                <div class="content-details">
+                    <p>Analisis de obras de arte escogidas de manera de libre observando los contornos, formas de creación y profundizar la historia con la que se creo.</p>
+                    <center>
+                        <img src="imagenes/ensayo17.jpeg">
+                    </center>
+                    <p>Alfaro Siqueiros.D1966(Mural)Del porfirismo a la Revolución, Museo Nacional de Historia en el Castillo de Chapultepec,INAH</p>
+                </div>
+            </details>
+        
+            <details>
+                <summary>Ensayo: Obras de arte - Mural "Del Porfirismo a la Revolución"</summary>
+                <div class="content-details">
+                    <p>Reacción del ensayo con base a la obra seleccionada profundizando no solo en la creación  de la obra, si no que tambien con el creador, desde su nacimiento
+                        asi como su historia y la insiración para creación de la obra.
+                    </p>
+                    <center>
+                        <img src="imagenes/ensayo18.png">
+                        <img src="imagenes/ensayo19.png">
+                    </center>
+                </div>
+            </details>
+            <br>
+            <br>
+
+<div class="video-grid">
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/dUH5RnBESgc" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <div class="video-info">
+            <h3>Cortometraje Alma</h3>
+            <p>Análisis del cortometraje utilizado en clase</p>
+        </div>
+    </div>
+    
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/cEg-9T_BHrA" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <div class="video-info">
+            <h3>Canción John el esquizofrénico</h3>
+            <p>Análisis de la canción</p>
+        </div>
+    </div>
+</div>
+    <div class="video-card">
+        <iframe src="https://www.tiktok.com/embed/7522495090892360968" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <div class="video-info">
+            <h3>Cómo realizar un ensayo</h3>
+            <p>Comprensión sobre la realización de un ensayo</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.tiktok.com/embed/7551590378122661128" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <div class="video-info">
+            <h3>Mural - David Alfaro Siqueiros</h3>
+            <p>Análisis del mural y lo que representa</p>
+        </div>
+    </div>
+</div>
+
+        <center>
+            <a href="#regresar" class="btn-regresar">Regresar</a>
+        </center>
+    </section>
+    </div>
+    <center>
+        <a href="index.html" target="_parent" class="btn-principal"> Regresar a página principal</a>
+    </center>
+        <footer>
+        <p>&copy; 2025 CECyTEM Cuautitlán - Pagina personal</p>
+        <p>Educación Media Superior de Calidad</p>
+    </footer>
+    </body>
+</html>
